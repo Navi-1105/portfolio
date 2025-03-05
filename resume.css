@@ -1,0 +1,27 @@
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Hover Effect */
+.btn-hover {
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.btn-hover:hover {
+    background: #444;  /* Darker shade on hover */
+    transform: scale(1.05);  /* Slight zoom effect */
+}

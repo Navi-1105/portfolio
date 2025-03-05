@@ -1,0 +1,51 @@
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #111, #222);
+    color: white;
+}
+
+.hero .container {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.name-highlight {
+    color: #f4a261;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #f4a261;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e76f51;
+}
+
+/* About Preview Section */
+.about-preview {
+    padding: 50px;
+    text-align: center;
+    background: white;
+    color: black;
+}
+
+.about-preview h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}

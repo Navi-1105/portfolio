@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Navneet Kaur</title>
+    <link rel="stylesheet" href="Global.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header id="navbar"></header>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="profilepic.jpg" alt="Navneet Kaur">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I'm Navneet Kaur, a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning.</p>
+                    <p>I have a strong foundation in C++, Python, and MySQL, and I have worked on projects such as a **Stock Management System** and **Zomato Analysis**.</p>
+                    <a href="resume.html"> Download Resume</a>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <ul>
+                <li>C++</li>
+                <li>Python</li>
+                <li>MySQL</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Machine Learning Basics</li>
+                <li>Data Structures & Algorithms</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Experience & Education Section -->
+<section class="experience">
+    <div class="container">
+        <h2>Experience & Education</h2>
+        
+        <div class="experience-grid">
+
+            <!-- Experience -->
+            <div class="experience-item">
+                <h3>Core Team Member & Content Writer</h3>
+                <p><strong>Organization:</strong>AIT TRIADS</p>
+                <p><strong>Duration:</strong> 10-10-2024 - Present</p>
+                <p>Responsible for creating technical content, managing documentation, and contributing to team discussions.</p>
+            </div>
+
+            <!-- Hackathon Experience -->
+            <div class="experience-item">
+                <h3>Hackathon Participant</h3>
+                <p><strong>Event:</strong> DTU Hackathon</p>
+                <p><strong>Year:</strong> 2024</p>
+                <p>Worked on an innovative project that tackled Buses system in Delhi and maintained record of carbon footprints.</p>
+            </div>
+
+            <!-- Education -->
+            <div class="experience-item">
+                <h3>B.Tech in Computer Science & Engineering (AIML)</h3>
+                <p><strong>Institution:</strong>Chandigarh University ,Gharuan </p>
+                <p><strong>Year:</strong> Second Year </p>
+                <p>B Tech. C.S.E AI&ML </p>
+
+
+    <script>
+        fetch("nav.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+
+</body>
+</html>

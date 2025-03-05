@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Navneet Kaur</title>
+    <link rel="stylesheet" href="Global.css">
+    <link rel="stylesheet" href="certification.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header id="navbar"></header>
+
+    <!-- Certifications Section -->
+    <section class="certifications">
+        <div class="container">
+            <h2>My Certifications</h2>
+
+            <div class="certifications-list">
+
+                <!-- Certificate 1 -->
+                <div class="certification-item">
+                    <h3>Introduction to Machine Learning</h3>
+                    <p>Issued by: Coursera</p>
+                    <a href="https://coursera.org/share/a9cb8865812f7b265232fe28911e2292" target="_blank" class="btn">View Certificate</a>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="certification-item">
+                    <h3>Exploratory Data Analysis With Python and Pandas</h3>
+                    <p>Issued by: Coursera</p>
+                    <a href="https://coursera.org/share/cd5e0a58aff843110a77384ef47125d1" target="_blank" class="btn">View Certificate</a>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="certification-item">
+                    <h3>The Structured Query Language (SQL)</h3>
+                    <p>Issued by:  Coursera</p>
+                    <a href="https://coursera.org/share/417e66993c98826754f5d0ca998af7ce" target="_blank" class="btn">View Certificate</a>
+                </div>
+                <div class="certification-item">
+                    <h3>Innovation Through Design: Think, Make, Break, Repeat</h3>
+                    <p>Issued by: Coursera</p>
+                    <a href="https://coursera.org/share/e122536dc1c90890bbb60c8afe7452c9" target="_blank" class="btn">View Certificate</a>
+                </div>
+
+            </div>
+
+            <!-- LinkedIn Profile -->
+            <div class="linkedin-section">
+                <h3>Connect with me on LinkedIn</h3>
+                <a href="www.linkedin.com/in/navneet-kaur-3697a6290" target="_blank" class="btn">Visit LinkedIn</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        fetch("nav.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+
+</body>
+</html>

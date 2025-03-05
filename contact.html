@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Navneet Kaur</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="stylecontact.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header id="navbar"></header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="somalnavneetkaur@gmail.com">somalnavneetkaur@gmail.com</a></p>
+                <p><strong>Phone:</strong> +91 82840 00103</p>
+                <p><strong>Location:</strong> Fatehgarh Sahib, Punjab</p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/navneet-kaur-3697a6290" target="_blank">Linkedin profile</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        fetch("nav.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+
+</body>
+</html>

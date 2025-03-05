@@ -1,0 +1,96 @@
+/* About Section */
+.about {
+    padding: 50px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #f4a261;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 10%;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills li {
+    list-style: none;
+    background: #111;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+/* Experience & Education Section */
+.experience {
+    padding: 50px 10%;
+    background: #fff;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.experience-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.experience-item {
+    background: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.experience-item p {
+    font-size: 1rem;
+    margin: 5px 0;
+}

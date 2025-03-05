@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navneet Kaur - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Global.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header id="navbar"></header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hi, I'm <span class="name-highlight">Navneet Kaur</span></h1>
+            <p>A passionate Computer Science student specializing in AI & ML.</p>
+            <a href="projects.html" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- Short About Section -->
+    <section class="about-preview">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a B.Tech CSE (AIML) student with skills in C++, Python, and MySQL. I have worked on projects like a Stock Management System and Zomato Analysis.</p>
+            <a href="about.html" class="btn">Know More</a>
+        </div>
+    </section>
+
+    <script>
+        fetch("nav.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+
+</body>
+</html>
