@@ -4,44 +4,319 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Navneet Kaur</title>
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="Global.css">
     <link rel="stylesheet" href="stylecontact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <header id="navbar"></header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Navneet Kaur</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- Contact Section -->
-    <section class="contact">
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
         <div class="container">
-            <h2>Contact Me</h2>
-            
-            <div class="contact-info">
-                <p><strong>Email:</strong> <a href="somalnavneetkaur@gmail.com">somalnavneetkaur@gmail.com</a></p>
-                <p><strong>Phone:</strong> +91 82840 00103</p>
-                <p><strong>Location:</strong> Fatehgarh Sahib, Punjab</p>
-            </div>
-
-            <!-- Contact Form -->
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-
-            <!-- Social Media Links -->
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/navneet-kaur-3697a6290" target="_blank">Linkedin profile</a>
+            <div class="hero-content">
+                <h1>Get In Touch</h1>
+                <p class="hero-subtitle">Let's discuss how we can work together to bring your ideas to life</p>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card" onclick="copyToClipboard('somalnavneetkaur@gmail.com')">
+                            <div class="card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Email</h3>
+                                <p>somalnavneetkaur@gmail.com</p>
+                                <div class="tooltip">Click to copy</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-card" onclick="copyToClipboard('+91 8284000103')">
+                            <div class="card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Phone</h3>
+                                <p>+91 8284000103</p>
+                                <div class="tooltip">Click to copy</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Location</h3>
+                                <p>Fatehgarh Sahib, Punjab, India</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Availability</h3>
+                                <p>Open to new opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-links-section">
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/navneet-kaur-3697a6290" target="_blank" class="social-link linkedin">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Navi-1105/" target="_blank" class="social-link github">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="mailto:somalnavneetkaur@gmail.com" class="social-link email">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Send Me a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="quick-navigation">
+                <h3>Quick Links</h3>
+                <div class="nav-buttons">
+                    <a href="about.html" class="nav-btn">
+                        <i class="fas fa-user"></i>
+                        About Me
+                    </a>
+                    <a href="projects.html" class="nav-btn">
+                        <i class="fas fa-code"></i>
+                        View Projects
+                    </a>
+                    <a href="experience.html" class="nav-btn">
+                        <i class="fas fa-briefcase"></i>
+                        Experience
+                    </a>
+                    <a href="index.html" class="nav-btn">
+                        <i class="fas fa-home"></i>
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Scripts -->
     <script>
-        fetch("nav.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("navbar").innerHTML = data);
+        // Form validation and submission
+        const form = document.getElementById('contactForm');
+        const inputs = form.querySelectorAll('input, textarea');
+
+        // Real-time validation
+        inputs.forEach(input => {
+            input.addEventListener('blur', validateField);
+            input.addEventListener('input', clearError);
+        });
+
+        function validateField(e) {
+            const field = e.target;
+            const value = field.value.trim();
+            const errorElement = document.getElementById(field.name + 'Error');
+            
+            // Clear previous error
+            clearError(e);
+            
+            // Validation rules
+            if (field.required && !value) {
+                showError(field, 'This field is required');
+                return false;
+            }
+            
+            if (field.type === 'email' && value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    showError(field, 'Please enter a valid email address');
+                    return false;
+                }
+            }
+            
+            if (field.name === 'message' && value.length < 10) {
+                showError(field, 'Message must be at least 10 characters long');
+                return false;
+            }
+            
+            return true;
+        }
+
+        function showError(field, message) {
+            const errorElement = document.getElementById(field.name + 'Error');
+            errorElement.textContent = message;
+            field.classList.add('error');
+        }
+
+        function clearError(e) {
+            const field = e.target;
+            const errorElement = document.getElementById(field.name + 'Error');
+            errorElement.textContent = '';
+            field.classList.remove('error');
+        }
+
+        // Form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate all fields
+            let isValid = true;
+            inputs.forEach(input => {
+                if (!validateField({ target: input })) {
+                    isValid = false;
+                }
+            });
+            
+            if (isValid) {
+                // Simulate form submission
+                const submitBtn = form.querySelector('.submit-btn');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const btnIcon = submitBtn.querySelector('.btn-icon');
+                
+                // Show loading state
+                btnText.textContent = 'Sending...';
+                btnIcon.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    showNotification('Message sent successfully! I\'ll get back to you soon.');
+                    form.reset();
+                    btnText.textContent = 'Send Message';
+                    btnIcon.innerHTML = '<i class="fas fa-paper-plane"></i>';
+                    submitBtn.disabled = false;
+                }, 2000);
+            }
+        });
+
+        // Copy to clipboard function
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showNotification('Copied to clipboard!');
+            });
+        }
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Contact card interactions
+        document.querySelectorAll('.contact-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Social link interactions
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Input focus effects
+        document.querySelectorAll('.input-wrapper input, .input-wrapper textarea').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
     </script>
 
 </body>

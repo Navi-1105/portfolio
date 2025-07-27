@@ -1,14 +1,515 @@
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s ease-in-out forwards;
+/* Reset and base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #eee;
+    margin: 0;
+    padding: 0;
 }
 
-@keyframes fadeIn {
+.header-section {
+    position: relative;
+    background: url('profilepic.jpg') center/cover no-repeat;
+    height: 400px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    width: 100%;
+}
+
+.status {
+    font-weight: 600;
+    color: #4caf50;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.download-cv-btn {
+    background-color: #ffb300;
+    border: none;
+    padding: 12px 28px;
+    color: #121212;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    float: right;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(255, 179, 0, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-cv-btn:hover {
+    background-color: #ffa000;
+    box-shadow: 0 6px 18px rgba(255, 179, 0, 0.8);
+}
+
+.role {
+    font-weight: 700;
+    color: #ffb300;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 5px 0 20px 0;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-tabs {
+    display: none;
+}
+
+.tab {
+    display: none;
+}
+
+.get-template-btn {
+    display: none;
+}
+
+.main-content {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.tab-content {
+    display: none;
+    color: #eee;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+h2 {
+    color: #ffb300;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-section {
+        height: 300px;
+        padding: 0 10px;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .download-cv-btn, .get-template-btn {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav-tabs {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .tab {
+        flex: 1 1 45%;
+        justify-content: center;
+    }
+}
+
+/* Add these new interactive styles to the existing resume.css */
+
+/* Floating Shapes Animation */
+.floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255, 179, 0, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.shape-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Typing Animation */
+.typing-text {
+    overflow: hidden;
+    border-right: 2px solid #ffb300;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #ffb300; }
+}
+
+/* Interactive Contact Items */
+.contact-item {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item:hover {
+    background: rgba(255, 179, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.contact-item .tooltip {
+    position: absolute;
+    right: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffb300;
+    color: #121212;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.contact-item:hover .tooltip {
+    opacity: 1;
+}
+
+/* Download CV Button Enhancement */
+.download-cv-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.download-cv-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 179, 0, 0.3);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffb300;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #ffb300;
+    border-radius: 2px;
+}
+
+/* Summary Container */
+.summary-container {
+    background: rgba(255, 179, 0, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 179, 0, 0.2);
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.summary-container:hover {
+    background: rgba(255, 179, 0, 0.08);
+    border-color: rgba(255, 179, 0, 0.4);
+}
+
+.summary-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Skills Showcase */
+.skills-showcase {
+    margin: 60px 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 179, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 179, 0, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.skill-card:hover::before {
+    left: 100%;
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    background: #ffb300;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 1.5rem;
+    color: #121212;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 179, 0, 0.3);
+}
+
+.skill-card h3 {
+    color: #ffb300;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.skill-level {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 179, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #ffb300;
+    border-radius: 4px;
+    transition: width 1s ease;
+    position: relative;
+}
+
+.progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.skill-level span {
+    color: #ffb300;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Stats Section */
+.stats-section {
+    margin: 60px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.stat-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 179, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ffb300, #ffa000);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 179, 0, 0.2);
+    border-color: rgba(255, 179, 0, 0.4);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffb300;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.stat-label {
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Animation Classes */
+.animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -16,12 +517,64 @@
     }
 }
 
-/* Button Hover Effect */
-.btn-hover {
-    transition: background 0.3s ease-in-out, transform 0.2s ease;
+/* Notification System */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ffb300;
+    color: #121212;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    z-index: 1000;
+    animation: slideInRight 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 179, 0, 0.3);
 }
 
-.btn-hover:hover {
-    background: #444;  /* Darker shade on hover */
-    transform: scale(1.05);  /* Slight zoom effect */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-item .tooltip {
+        position: static;
+        margin-top: 5px;
+        opacity: 1;
+    }
 }

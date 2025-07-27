@@ -10,7 +10,16 @@
 <body>
 
     <!-- Navigation Bar -->
-    <header id="navbar"></header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Navneet Kaur</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- Certifications Section -->
     <section class="certifications">
@@ -56,11 +65,7 @@
         </div>
     </section>
 
-    <script>
-        fetch("nav.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("navbar").innerHTML = data);
-    </script>
+
 
 </body>
 </html>

@@ -6,49 +6,294 @@
     <title>Projects - Navneet Kaur</title>
     <link rel="stylesheet" href="Global.css">
     <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <header id="navbar"></header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Navneet Kaur</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                                    <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- Projects Section -->
-    <section class="projects">
+    <!-- Projects Hero Section -->
+    <section class="projects-hero">
         <div class="container">
-            <h2>My Projects</h2>
-
-            <div class="projects-grid">
-
-                <!-- Project 1 -->
-                <div class="project-item">
-                    <h3>Stock Management System</h3>
-                    <p>A database-driven system to manage stock inventory efficiently using c++.</p>
-                    
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-item">
-                    <h3>Zomato Analysis</h3>
-                    <p>A data analysis project using Python and Pandas to explore trends in restaurant data.</p>
-                    
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-item">
-                    <h3>Job Offer Letter Analyser</h3>
-                    <p>The Job Offer Letter Analyzer is a web-based tool that helps job seekers analyze and compare job offer letters efficiently. It extracts key details such as salary, benefits, job role, joining date, and contract terms from offer letters</p>
-                   
-                </div>
-
+            <div class="hero-content">
+                <h1>My Projects</h1>
+                <p class="hero-subtitle">Showcasing my expertise in Data Analysis, Machine Learning, and Frontend Development</p>
             </div>
         </div>
     </section>
 
-    <script>
-        fetch("nav.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("navbar").innerHTML = data);
-    </script>
+    <!-- Featured Projects -->
+    <section class="featured-projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            
+            <!-- Project 1: AI-Based Political Speech Analyzer -->
+            <div class="project-card featured">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>AI-Based Political Speech Analyzer</h3>
+                        <div class="project-badge">Featured</div>
+                    </div>
+                    <p class="project-description">
+                        A real-time analyzer that uses NLP and sentiment analysis to detect bias in political speeches. 
+                        Achieved 88% classification accuracy on 500+ samples, launched with Streamlit, and reached 200+ unique users. 
+                        Automated reporting reduced manual analysis time by 40%.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-chart-line"></i>
+                            <span>88% Accuracy</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-users"></i>
+                            <span>200+ Users</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-clock"></i>
+                            <span>40% Time Saved</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Sentiment Analysis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://bias-detection-nav.streamlit.app/" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/Navi-1105/bias-detection-app" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Job Offer Letter Analyzer -->
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Job Offer Letter Analyzer</h3>
+                    </div>
+                    <p class="project-description">
+                        A Flask-based parser tool for extracting key data (salary, perks, job roles, clauses) from PDF offer letters. 
+                        Integrated LLM for indirect phrasing detection, boosting perk extraction accuracy to 90%+, and enabled a 15% increase in successful negotiations.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-percentage"></i>
+                            <span>90%+ Accuracy</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>15% Success Rate</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-robot"></i>
+                            <span>LLM Integration</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">LLM</span>
+                        <span class="tech-tag">PDF Parsing</span>
+                        <span class="tech-tag">NLP</span>
+                    </div>
+                    <div class="project-links">
+                        
+                        <a href="https://github.com/Navi-1105/job-offer-letter-analyser" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Zomato Data Analysis -->
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>Zomato Data Analysis</h3>
+                    </div>
+                    <p class="project-description">
+                        In-depth analysis of 10,000+ restaurant reviews to uncover sentiment, pricing patterns, and cuisine trends. 
+                        Delivered 10+ actionable visualizations, built strategic Tableau dashboards, and provided insights that improved business menu targeting and pricing strategies.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-database"></i>
+                            <span>10,000+ Reviews</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>10+ Visualizations</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Strategic Insights</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Sentiment Analysis</span>
+                        <span class="tech-tag">Business Analytics</span>
+                    </div>
+                    <div class="project-links">
+                        
+                        <a href="https://github.com/Navi-1105/zomato-restaurant-analysis/tree/main/zomato-restaurant-analysis" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: AgriCart -->
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>AgriCart</h3>
+                    </div>
+                    <p class="project-description">
+                        A modern frontend project for an e-commerce web app focused on agricultural products and tools. 
+                        Implements a responsive UI/UX design using modern JavaScript frameworks, streamlined customer journeys, and live product previews.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Modern UI/UX</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-rocket"></i>
+                            <span>Fast Performance</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">UI/UX Design</span>
+                        <span class="tech-tag">E-commerce</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/Navi-1105/agricart" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Showcase -->
+    <section class="skills-showcase">
+        <div class="container">
+            <h2>Technologies & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Sentiment Analysis</span>
+                        <span class="skill-tag">LLM Integration</span>
+                        <span class="skill-tag">Classification</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-bar"></i> Data Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">Business Analytics</span>
+                        <span class="skill-tag">Statistical Analysis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-palette"></i> Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">E-commerce</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Working Together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life with data-driven insights and modern web solutions.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
 </body>
 </html>

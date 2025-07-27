@@ -7,81 +7,206 @@
     <link rel="stylesheet" href="Global.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <header id="navbar"></header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Navneet Kaur</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link active">About</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- About Section -->
-    <section class="about">
+    <!-- About Me Section -->
+    <section class="about-hero">
         <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="profilepic.jpg" alt="Navneet Kaur">
+            <div class="about-header">
+                <h1>About Me</h1>
+                <div class="professional-tagline">
+                    <i class="fas fa-chart-line"></i>
+                    Student | Turning Complex Data into Strategic Insights
                 </div>
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>I'm Navneet Kaur, a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning.</p>
-                    <p>I have a strong foundation in C++, Python, and MySQL, and I have worked on projects such as a **Stock Management System** and **Zomato Analysis**.</p>
-                    <a href="resume.html"> Download Resume</a>
+            </div>
 
+            <div class="profile-overview">
+                <div class="profile-image">
+                    <img src="IMG_8938.jpg" alt="Navneet Kaur">
+                </div>
+                <div class="profile-content">
+                    <h2>Meet Navneet</h2>
+                    <p class="intro-text">
+                        I'm a ML enthusiast based in Fatehgarh Sahib, Punjab. I specialize in Python, SQL, Tableau, and machine learning—extracting actionable business insights and delivering automated data solutions that drive measurable business growth.
+                    </p>
+                    
+                    <!-- Personal Information Grid -->
+                    <div class="personal-info-grid">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Education</h4>
+                                <p>B.Tech Computer Science & Engineering</p>
+                                <span class="sub-text">Specialization in AI & ML</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Location</h4>
+                                <p>Fatehgarh Sahib, Punjab, India</p>
+                                <span class="sub-text">Open to remote opportunities</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Current Status</h4>
+                                <p>Student & ML Enthusiast</p>
+                                <span class="sub-text">Seeking opportunities</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Experience</h4>
+                                <p>3 Internships Completed</p>
+                                <span class="sub-text">Deloitte, BCG, Prasunset</span>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Quick Stats -->
+                    <div class="quick-stats">
+                        <div class="stat">
+                            <span class="stat-number">8.90</span>
+                            <span class="stat-label">SGPA</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Internships</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">85%</span>
+                            <span class="stat-label">Avg Accuracy</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="skills">
+    <section class="skills-section">
         <div class="container">
-            <h2>My Skills</h2>
-            <ul>
-                <li>C++</li>
-                <li>Python</li>
-                <li>MySQL</li>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Machine Learning Basics</li>
-                <li>Data Structures & Algorithms</li>
-            </ul>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-bar"></i> Data Visualization</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Sentiment Analysis</span>
+                        <span class="skill-tag">Classification</span>
+                        <span class="skill-tag">Random Forest</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Jupyter</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- Experience & Education Section -->
-<section class="experience">
-    <div class="container">
-        <h2>Experience & Education</h2>
-        
-        <div class="experience-grid">
 
-            <!-- Experience -->
-            <div class="experience-item">
-                <h3>Core Team Member & Content Writer</h3>
-                <p><strong>Organization:</strong>AIT TRIADS</p>
-                <p><strong>Duration:</strong> 10-10-2024 - Present</p>
-                <p>Responsible for creating technical content, managing documentation, and contributing to team discussions.</p>
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>somalnavneetkaur@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <p>+91 8284000103</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>LinkedIn</h4>
+                        <p>linkedin.com/in/navneet-kaur-3697a6290/</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>GitHub</h4>
+                        <p>github.com/Navi-1105/</p>
+                    </div>
+                </div>
             </div>
-
-            <!-- Hackathon Experience -->
-            <div class="experience-item">
-                <h3>Hackathon Participant</h3>
-                <p><strong>Event:</strong> DTU Hackathon</p>
-                <p><strong>Year:</strong> 2024</p>
-                <p>Worked on an innovative project that tackled Buses system in Delhi and maintained record of carbon footprints.</p>
-            </div>
-
-            <!-- Education -->
-            <div class="experience-item">
-                <h3>B.Tech in Computer Science & Engineering (AIML)</h3>
-                <p><strong>Institution:</strong>Chandigarh University ,Gharuan </p>
-                <p><strong>Year:</strong> Second Year </p>
-                <p>B Tech. C.S.E AI&ML </p>
-
-
-    <script>
-        fetch("nav.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("navbar").innerHTML = data);
-    </script>
+        </div>
+    </section>
 
 </body>
 </html>
