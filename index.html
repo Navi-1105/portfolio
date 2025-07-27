@@ -5,31 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Navneet Kaur Portfolio</title>
     <link rel="stylesheet" href="Global.css" />
-    <link rel="stylesheet" href="resume.css" />
-    <link rel="stylesheet" href="about.css" />
-    <link rel="stylesheet" href="projects.css" />
-    <link rel="stylesheet" href="experience.css" />
-    <link rel="stylesheet" href="stylecontact.css" />
+    <link rel="stylesheet" href="resume.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="about.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="projects.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="experience.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="stylecontact.css" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="#" class="logo">Navneet Kaur</a>
+        <a href="index.html" class="logo">Navneet Kaur</a>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <ul class="nav-links">
-            <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
-            <li><a href="#" class="nav-link" data-target="about">About</a></li>
-            <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
-            <li><a href="#" class="nav-link" data-target="experience">Experience</a></li>
-            <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="experience.html" class="nav-link">Experience</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
@@ -123,11 +120,9 @@
                         </div>
                         <h3>Data Analysis</h3>
                         <div class="skill-level">
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 88%"></div>
-                            </div>
-                            <span>88%</span>
+                            <div class="progress" style="width: 88%"></div>
                         </div>
+                        <span>88%</span>
                     </div>
                     
                     <div class="skill-card" data-skill="SQL">
@@ -136,11 +131,9 @@
                         </div>
                         <h3>SQL</h3>
                         <div class="skill-level">
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 82%"></div>
-                            </div>
-                            <span>82%</span>
+                            <div class="progress" style="width: 82%"></div>
                         </div>
+                        <span>82%</span>
                     </div>
                 </div>
             </div>
@@ -159,409 +152,9 @@
                 </div>
             </div>
         </section>
-
-        <!-- About Section -->
-        <section id="about" class="tab-content">
-            <div class="about-hero">
-                <div class="container">
-                    <div class="about-header">
-                        <h1>About Me</h1>
-                        <div class="professional-tagline">
-                            <i class="fas fa-chart-line"></i>
-                            Student | Turning Complex Data into Strategic Insights
-                        </div>
-                    </div>
-
-                    <div class="profile-overview">
-                        <div class="profile-image">
-                            <img src="IMG_8938.jpg" alt="Navneet Kaur" />
-                        </div>
-                        <div class="profile-content">
-                            <h2>Meet Navneet</h2>
-                            <p class="intro-text">
-                                I'm a ML enthusiast based in Fatehgarh Sahib, Punjab. I specialize in Python, SQL, Tableau, and machine learning—extracting actionable business insights and delivering automated data solutions that drive measurable business growth.
-                            </p>
-
-                            <div class="personal-info-grid">
-                                <div class="info-item">
-                                    <div class="info-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <div class="info-content">
-                                        <h4>Education</h4>
-                                        <p>B.Tech Computer Science & Engineering</p>
-                                        <span class="sub-text">Specialization in AI & ML</span>
-                                    </div>
-                                </div>
-
-                                <div class="info-item">
-                                    <div class="info-icon">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="info-content">
-                                        <h4>Location</h4>
-                                        <p>Fatehgarh Sahib, Punjab, India</p>
-                                        <span class="sub-text">Open to remote opportunities</span>
-                                    </div>
-                                </div>
-
-                                <div class="info-item">
-                                    <div class="info-icon">
-                                        <i class="fas fa-chart-line"></i>
-                                    </div>
-                                    <div class="info-content">
-                                        <h4>Current Status</h4>
-                                        <p>Student & ML Enthusiast</p>
-                                        <span class="sub-text">Seeking opportunities</span>
-                                    </div>
-                                </div>
-
-                                <div class="info-item">
-                                    <div class="info-icon">
-                                        <i class="fas fa-briefcase"></i>
-                                    </div>
-                                    <div class="info-content">
-                                        <h4>Experience</h4>
-                                        <p>3 Internships Completed</p>
-                                        <span class="sub-text">Deloitte, BCG, Prasunset</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="quick-stats">
-                                <div class="stat">
-                                    <span class="stat-number">8.90</span>
-                                    <span class="stat-label">SGPA</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">6</span>
-                                    <span class="stat-label">Projects</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">3</span>
-                                    <span class="stat-label">Internships</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-number">85%</span>
-                                    <span class="stat-label">Avg Accuracy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="tab-content">
-            <div class="projects-hero">
-                <div class="container">
-                    <div class="hero-content">
-                        <h1>My Projects</h1>
-                        <p class="hero-subtitle">Showcasing my expertise in Data Analysis, Machine Learning, and Frontend Development</p>
-                    </div>
-                </div>
-            </div>
-
-            <section class="featured-projects">
-                <div class="container">
-                    <h2>Featured Projects</h2>
-
-                    <!-- Project cards here (same as projects.html content) -->
-                    <div class="project-card featured">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <i class="fas fa-microphone"></i>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>AI-Based Political Speech Analyzer</h3>
-                                <div class="project-badge">Featured</div>
-                            </div>
-                            <p class="project-description">
-                                A real-time analyzer that uses NLP and sentiment analysis to detect bias in political speeches. 
-                                Achieved 88% classification accuracy on 500+ samples, launched with Streamlit, and reached 200+ unique users. 
-                                Automated reporting reduced manual analysis time by 40%.
-                            </p>
-                            <div class="project-highlights">
-                                <div class="highlight">
-                                    <i class="fas fa-chart-line"></i>
-                                    <span>88% Accuracy</span>
-                                </div>
-                                <div class="highlight">
-                                    <i class="fas fa-users"></i>
-                                    <span>200+ Users</span>
-                                </div>
-                                <div class="highlight">
-                                    <i class="fas fa-clock"></i>
-                                    <span>40% Time Saved</span>
-                                </div>
-                            </div>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">NLP</span>
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">Streamlit</span>
-                                <span class="tech-tag">Sentiment Analysis</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://bias-detection-nav.streamlit.app/" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    Live Demo
-                                </a>
-                                <a href="https://github.com/Navi-1105/bias-detection-app" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                    View Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Other project cards omitted for brevity, but should be included similarly -->
-                </div>
-            </section>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="tab-content">
-            <div class="experience-hero">
-                <div class="container">
-                    <div class="hero-content">
-                        <h1>Professional Experience</h1>
-                        <p class="hero-subtitle">Showcasing my journey through data analytics, machine learning, and business intelligence roles</p>
-                    </div>
-                </div>
-            </div>
-
-            <section class="experience-timeline">
-                <div class="container">
-                    <h2>Work Experience</h2>
-                    <!-- Experience cards here (same as experience.html content) -->
-                    <div class="experience-card featured">
-                        <div class="experience-header">
-                            <div class="company-info">
-                                <h3>Intern – Prasunset Company</h3>
-                                <div class="company-badge">Latest</div>
-                            </div>
-                            <div class="experience-meta">
-                                <span class="duration"><i class="fas fa-calendar"></i> Mar 2025 – Jun 2025</span>
-                                <span class="location"><i class="fas fa-map-marker-alt"></i> Remote</span>
-                            </div>
-                        </div>
-                        <div class="experience-content">
-                            <div class="achievement-grid">
-                                <div class="achievement-item">
-                                    <div class="achievement-icon">
-                                        <i class="fas fa-brain"></i>
-                                    </div>
-                                    <div class="achievement-content">
-                                        <h4>AI-Based Political Speech Analyzer</h4>
-                                        <p>Delivered an AI-based Political Speech Analyzer with <strong>85% bias and sentiment detection accuracy</strong> on 500+ speeches.</p>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <div class="achievement-icon">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                    <div class="achievement-content">
-                                        <h4>Real-time User Interaction</h4>
-                                        <p>Enabled real-time user interaction, resulting in <strong>over 200 user sessions</strong> in the first month.</p>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <div class="achievement-icon">
-                                        <i class="fas fa-chart-line"></i>
-                                    </div>
-                                    <div class="achievement-content">
-                                        <h4>Workflow Efficiency</h4>
-                                        <p>Synthesized actionable insights that improved <strong>workflow efficiency by 30%</strong> for the analytics team.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">NLP</span>
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">Sentiment Analysis</span>
-                                <span class="tech-tag">Streamlit</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Other experience cards omitted for brevity -->
-                </div>
-            </section>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="tab-content">
-            <div class="contact-hero">
-                <div class="container">
-                    <div class="hero-content">
-                        <h1>Get In Touch</h1>
-                        <p class="hero-subtitle">Let's discuss how we can work together to bring your ideas to life</p>
-                    </div>
-                </div>
-            </div>
-
-            <section class="contact">
-                <div class="container">
-                    <div class="contact-grid">
-                        <div class="contact-info-section">
-                            <h2>Contact Information</h2>
-                            <div class="contact-cards">
-                                <div class="contact-card" onclick="copyToClipboard('somalnavneetkaur@gmail.com')">
-                                    <div class="card-icon">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Email</h3>
-                                        <p>somalnavneetkaur@gmail.com</p>
-                                        <div class="tooltip">Click to copy</div>
-                                    </div>
-                                </div>
-                                <div class="contact-card" onclick="copyToClipboard('+91 8284000103')">
-                                    <div class="card-icon">
-                                        <i class="fas fa-phone"></i>
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Phone</h3>
-                                        <p>+91 8284000103</p>
-                                        <div class="tooltip">Click to copy</div>
-                                    </div>
-                                </div>
-                                <div class="contact-card">
-                                    <div class="card-icon">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Location</h3>
-                                        <p>Fatehgarh Sahib, Punjab, India</p>
-                                    </div>
-                                </div>
-                                <div class="contact-card">
-                                    <div class="card-icon">
-                                        <i class="fas fa-clock"></i>
-                                    </div>
-                                    <div class="card-content">
-                                        <h3>Availability</h3>
-                                        <p>Open to new opportunities</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="social-links-section">
-                                <h3>Connect With Me</h3>
-                                <div class="social-links">
-                                    <a href="https://www.linkedin.com/in/navneet-kaur-3697a6290" target="_blank" class="social-link linkedin">
-                                        <i class="fab fa-linkedin"></i>
-                                        <span>LinkedIn</span>
-                                    </a>
-                                    <a href="https://github.com/Navi-1105/" target="_blank" class="social-link github">
-                                        <i class="fab fa-github"></i>
-                                        <span>GitHub</span>
-                                    </a>
-                                    <a href="mailto:somalnavneetkaur@gmail.com" class="social-link email">
-                                        <i class="fas fa-envelope"></i>
-                                        <span>Email</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-form-section">
-                            <h2>Send Me a Message</h2>
-                            <form class="contact-form" id="contactForm">
-                                <div class="form-group">
-                                    <div class="input-wrapper">
-                                        <input type="text" name="name" id="name" placeholder="Your Name" required />
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                    <div class="error-message" id="nameError"></div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-wrapper">
-                                        <input type="email" name="email" id="email" placeholder="Your Email" required />
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <div class="error-message" id="emailError"></div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-wrapper">
-                                        <input type="text" name="subject" id="subject" placeholder="Subject" required />
-                                        <i class="fas fa-tag"></i>
-                                    </div>
-                                    <div class="error-message" id="subjectError"></div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-wrapper">
-                                        <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
-                                        <i class="fas fa-comment"></i>
-                                    </div>
-                                    <div class="error-message" id="messageError"></div>
-                                </div>
-                                <button type="submit" class="submit-btn">
-                                    <span class="btn-text">Send Message</span>
-                                    <span class="btn-icon">
-                                        <i class="fas fa-paper-plane"></i>
-                                    </span>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="quick-navigation">
-                        <h3>Quick Links</h3>
-                        <div class="nav-buttons">
-                            <a href="#" class="nav-btn" data-target="about">
-                                <i class="fas fa-user"></i>
-                                About Me
-                            </a>
-                            <a href="#" class="nav-btn" data-target="projects">
-                                <i class="fas fa-code"></i>
-                                View Projects
-                            </a>
-                            <a href="#" class="nav-btn" data-target="experience">
-                                <i class="fas fa-briefcase"></i>
-                                Experience
-                            </a>
-                            <a href="#" class="nav-btn" data-target="home">
-                                <i class="fas fa-home"></i>
-                                Back to Home
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
     </main>
 
     <script>
-        // JavaScript for dynamic tab navigation
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                const target = link.getAttribute('data-target');
-                if (!target) return;
-
-                // Hide all tab contents
-                document.querySelectorAll('.tab-content').forEach(section => {
-                    section.classList.remove('active');
-                });
-
-                // Remove active class from all nav links
-                document.querySelectorAll('.nav-link').forEach(nav => {
-                    nav.classList.remove('active');
-                });
-
-                // Show target section
-                const targetSection = document.getElementById(target);
-                if (targetSection) {
-                    targetSection.classList.add('active');
-                }
-
-                // Set clicked nav link as active
-                link.classList.add('active');
-            });
-        });
-
         // Copy to clipboard function
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
@@ -586,5 +179,6 @@
             showNotification('CV download started!');
         }
     </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
